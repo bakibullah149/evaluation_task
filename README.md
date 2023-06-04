@@ -5,7 +5,7 @@
 
 Q1.1: Blender provides an API that can be interacted with using Python. How can you use Python scripting to automate the creation of a 3D model in Blender? Please provide a basic code example.
 
-Answer: Blender, the popular open-source 3D computer graphics software, provides an API (Application Programming Interface) that allows users to interact with Blender's functionalities programmatically using the Python programming language.
+`Answer`: Blender, the popular open-source 3D computer graphics software, provides an API (Application Programming Interface) that allows users to interact with Blender's functionalities programmatically using the Python programming language.
 
 The Blender Python API enables one to automate tasks, create custom tools and add-ons, manipulate objects, materials, textures, and perform various operations within Blender. It provides access to a wide range of features and functionality, making it a powerful tool for scripting and extending Blender's capabilities.
 
