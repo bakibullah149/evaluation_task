@@ -7,9 +7,9 @@ Q1.1: Blender provides an API that can be interacted with using Python. How can 
 
 `Answer`: Blender, the popular open-source 3D computer graphics software, provides an API (Application Programming Interface) that allows users to interact with Blender's functionalities programmatically using the Python programming language.
 
-The Blender Python API enables one to automate tasks, create custom tools and add-ons, manipulate objects, materials, textures, and perform various operations within Blender. It provides access to a wide range of features and functionality, making it a powerful tool for scripting and extending Blender's capabilities.
+The Blender Python API enables us to automate tasks, create custom tools and add-ons, manipulate objects, materials, textures, and perform various operations within Blender. It provides access to a wide range of features and functionality, making it a powerful tool for scripting and extending Blender's capabilities.
 
-The Blender Python API allows one to create, modify, and delete objects; manipulate object properties; access and edit materials and textures; perform animations; render scenes; and much more. The API provides a comprehensive set of classes, functions, and modules that allow one to control almost every aspect of Blender.
+The Blender Python API allows us to create, modify, and delete objects; manipulate object properties; access and edit materials and textures; perform animations; render scenes; and much more. The API provides a comprehensive set of classes, functions, and modules that allow us to control almost every aspect of Blender.
 
 Leveraging the Blender Python API can extend Blender's functionality, automate repetitive tasks, create custom workflows, and integrate Blender with other tools and software, enabling greater flexibility and efficiency in 3D graphics projects.
 
