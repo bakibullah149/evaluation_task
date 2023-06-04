@@ -41,7 +41,7 @@ After that, we can create a new material and set its color to red. We can append
 ```javascript
 # Create a new material
 material = bpy.data.materials.new(name="Red")
-material.diffuse_color = (1, 0, 0)  # Set the material color to red
+material.diffuse_color = (1, 1, 1, 1)  # Set the material color to red
 
 # Assign the material to the cube
 cube.data.materials.append(material)
