@@ -202,6 +202,51 @@ In the Dockerfile, we would typically include the following information:
 - **Installing dependencies:** If our application has any dependencies, we need to install them inside the container. This can be done using package managers like pip or conda.
 
 
+Q2.2: Explain how you can use Docker Compose to manage multi-container Python applications.
+
+`Answer:`Docker Compose is a tool that simplifies the management of multi-container Docker applications. It allows us to define and run multiple containers as a single service, making it easier to orchestrate complex applications. Here's an example of how to use Docker Compose to manage a multi-container Python application:
+
+- **Install Docker Compose:** First, we have to ensure that we have Docker Compose installed on our system.
+
+- **Creating a Docker Compose YAML file:** Then we have to create a file named `docker-compose.yml` in the root directory of our project. This file will contain the configuration for our multi-container application.
+
+- **Defining services:** In the `docker-compose.yml` file, we have to specify the services (containers) that make up our application. Each service represents a separate container. In this example, let's consider a Python application with a web server and a PostgreSQL database.
+
+Example `docker-compose.yml`:
+```javascript
+version: '3.9'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+```
+In this example, we define two services: `web` and `db`. The `web` service is built using the Dockerfile in the current directory (`build: .`). It maps port 5000 of the host machine to port 5000 of the container (`ports: - "5000:5000"`). It also specifies a dependency on the db service, which means that the db service will be started before the web service (`depends_on: - db`).
+
+The `db` service uses the official PostgreSQL image (`image: postgres`). It sets the environment variables for the PostgreSQL container, including the username and password.
+
+- **Building and running the containers:** Now, we have to open a terminal or command prompt, navigate to the directory containing the `docker-compose.yml` file, and run the following command:
+```javascript
+docker-compose up
+```
+This command will build the necessary Docker images and create and start the containers based on the configuration in the `docker-compose.yml` file. We should see the logs from both containers being displayed in the terminal.
+
+- **Accessing the application:** Once the containers are up and running, we can access the web server from our browser by visiting http://localhost:5000. The web server container can communicate with the PostgreSQL database using the service name defined in the `docker-compose.yml` file (`db`).
+
+- **Stopping the containers:** To stop the containers, we can press `Ctrl + C` in the terminal running the docker-compose up command. Alternatively, we can run the following command in a separate terminal:
+```javascript
+docker-compose down
+```
+This command will stop and remove the containers, but it will preserve the data stored in the PostgreSQL container because the data is stored in a Docker volume by default.
+
 - **Exposing ports:** If our application listens on a specific port, we should expose that port in the Dockerfile so that it can be accessed from outside the container.
 
 
