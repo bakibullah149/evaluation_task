@@ -123,4 +123,15 @@ cube.matrix_world @= transform_matrix
 ```
 Here, three transformation matrices are created using the `mathutils.Matrix` functions. The `translation_matrix` translates the cube by 2 units along the Z-axis, the `rotation_matrix` rotates the cube by `rotation_angle` around the X-axis, and the `scale_matrix` scales the cube by a factor of 1.5 along the X-axis. These matrices are then combined using the matrix multiplication operator `@` to create the `transform_matrix`. Finally, the `matrix_world` attribute of the cube object is updated by multiplying it with the `transform_matrix`, effectively applying the transformation to the cube.
 
-## Links
+
+-- Here are some resources I used to finish this section:
+
+[Example Q1](https://drive.google.com/file/d/14tKop2gsH-qVmRg7ivnd9I-Gq1Y0A4WZ/view?usp=drive_link)
+
+[Transformation](https://drive.google.com/file/d/1Yl3ivEIXf5Pf4apzrRMajkBhNnZYzusJ/view?usp=drive_link)
+
+[Template](https://drive.google.com/file/d/1bJxdYUJspVPnGqMwwl5yK7Y00dLbSXRe/view?usp=drive_link)
+
+[Shader Library](https://drive.google.com/file/d/1aTdW11C50MgvTcH25-QAfH7IA6RoMSj-/view?usp=drive_link)
+
+[Untitled](https://drive.google.com/file/d/1w21yWIsuB6kTOtH2vFQB-zEVWlmgGcDf/view?usp=drive_link)
