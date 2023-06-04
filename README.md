@@ -124,7 +124,7 @@ cube.matrix_world @= transform_matrix
 Here, three transformation matrices are created using the `mathutils.Matrix` functions. The `translation_matrix` translates the cube by 2 units along the Z-axis, the `rotation_matrix` rotates the cube by `rotation_angle` around the X-axis, and the `scale_matrix` scales the cube by a factor of 1.5 along the X-axis. These matrices are then combined using the matrix multiplication operator `@` to create the `transform_matrix`. Finally, the `matrix_world` attribute of the cube object is updated by multiplying it with the `transform_matrix`, effectively applying the transformation to the cube.
 
 
--- Here are some resources I used to finish this section:
+-- I finished the following tasks to finish this part:
 
 [Example Q1](https://drive.google.com/file/d/14tKop2gsH-qVmRg7ivnd9I-Gq1Y0A4WZ/view?usp=drive_link)
 
@@ -264,7 +264,7 @@ This command will stop and remove the containers, but it will preserve the data 
 
 - **Defining the startup command:** Finally, we have to specify the command that should be executed when the container starts. This command typically runs our application.
 
--- Here are some resources I used to finish this section:
+-- I finished the following tasks to finish this part:
 
 [Script Docker](https://drive.google.com/drive/folders/1gUoHQh3HsOftifhJppGoTmzYq2wpYuPx?usp=drive_link)
 
@@ -392,7 +392,7 @@ By following these steps, we can successfully import and use a 3D model created 
 
 
 
--- Here are some resources I used to finish this section:
+-- I finished the following tasks to finish this part:
 
 [Example](https://drive.google.com/drive/folders/1syUwjYP17OtNPQn6P0Tmjc4ZkLb0L7Ja?usp=drive_link)
 
