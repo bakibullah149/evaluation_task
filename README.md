@@ -277,3 +277,70 @@ This command will stop and remove the containers, but it will preserve the data 
 [Example yml](https://drive.google.com/drive/folders/1WIGm1TwWo6ZkbHT6vBYKvgcyO6wO8g35?usp=sharing)
 
 [Word Press Site](https://drive.google.com/drive/folders/1vMCzWmgYTY1ObYbjHK0eJxXDee_h84QW?usp=sharing)
+
+
+
+# ****JavaScript 3D (Three.js)****
+
+Q3.1: Describe the fundamental components needed to render a basic 3D scene using Three.js.
+
+`Answer`: To render a basic 3D scene using Three.js, we will need several fundamental components. Here's an overview of the key elements:
+
+**Scene:** The Scene object serves as a container for all the 3D objects, lights, and cameras in our scene. It acts as a parent to all the objects we want to render.
+```javascript
+// Creating a scene
+var scene = new THREE.Scene();
+```
+**Camera:** The Camera determines the perspective and view of our scene. Three.js provides various camera types, such as PerspectiveCamera or OrthographicCamera. The camera's position and orientation control what is visible in the rendered scene.
+```javascript
+// Creating a camera
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 5;
+```
+**Renderer:** The Renderer is responsible for transforming the 3D objects and scene into the final 2D image that is displayed on the screen. Three.js provides WebGLRenderer, which uses WebGL to perform high-performance rendering.
+```javascript
+// Creating a renderer
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+```
+**Geometry:** The Geometry defines the shape and structure of 3D objects. Three.js includes several built-in geometries like BoxGeometry, SphereGeometry, and PlaneGeometry. We can also create custom geometries by specifying vertices and faces manually.
+```javascript
+// Creating a geometry (BoxGeometry)
+var geometry = new THREE.BoxGeometry(1, 1, 1);
+```
+**Material:** The Material determines the appearance of a 3D object, such as its color, texture, transparency, and shading. Three.js provides a variety of material types like MeshBasicMaterial, MeshPhongMaterial, and MeshLambertMaterial, each with different properties and visual effects.
+```javascript
+// Creating a material (MeshBasicMaterial)
+var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+```
+**Mesh:** The Mesh combines the geometry and material to create a visible 3D object. It represents a single instance of a geometric shape in the scene.
+```javascript
+// Creating a mesh by combining the geometry and material
+var cube = new THREE.Mesh(geometry, material);
+```
+**Light:** The Light objects define the light sources that illuminate the scene and affect the appearance of objects. Three.js supports different light types, including AmbientLight, DirectionalLight, PointLight, and SpotLight.
+```javascript
+// Creating a light source (PointLight)
+var light = new THREE.PointLight(0xffffff, 1);
+light.position.set(2, 2, 2);
+```
+**Animation:** Three.js provides animation capabilities to bring our 3D scene to life. We can animate the position, rotation, scale, and other properties of objects using keyframes or tweening libraries like Tween.js.
+```javascript
+// Animation function
+function animate() {
+  requestAnimationFrame(animate);
+
+  // Rotate the cube
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
+
+  // Render the scene with the camera
+  renderer.render(scene, camera);
+}
+
+// Call the animation function
+animate();
+```
+These fundamental components work together to create a basic 3D scene in Three.js. By customizing and expanding upon these components, we can create complex and interactive 3D graphics in your web applications.
+
