@@ -1,7 +1,7 @@
-# evaluation_task
+# ****evaluation_task****
 
 
-# Blender & Python
+# ****Blender & Python****
 
 Q1.1: Blender provides an API that can be interacted with using Python. How can you use Python scripting to automate the creation of a 3D model in Blender? Please provide a basic code example.
 
@@ -144,44 +144,44 @@ Q2.1: Describe the steps to create a Docker container for a Python-based applica
 
 `Answer:`To create a Docker container for a Python-based application, we can follow these steps:
 
-- **Creating a Dockerfile:** We can start by creating a file called `Dockerfile` in the root directory of our project. This file will contain instructions to build our Docker image.
+**Creating a Dockerfile:** We can start by creating a file called `Dockerfile` in the root directory of our project. This file will contain instructions to build our Docker image.
 
-- **Specifying the base image:** In the Dockerfile, we can begin by specifying the base image we want to use. For a Python-based application, we can use an official Python base image. We have to choose an appropriate tag, such as `python:3.9`, to specify the Python version we need.
+**Specifying the base image:** In the Dockerfile, we can begin by specifying the base image we want to use. For a Python-based application, we can use an official Python base image. We have to choose an appropriate tag, such as `python:3.9`, to specify the Python version we need.
 ```javascript
 # Using the official Python base image with Python 3.9
 FROM python:3.9
 ```
-- **Copying the application code:** Next, copying the application code into the Docker image. This is typically done using the `COPY` instruction in the Dockerfile. Specifying the source directory of the code and the destination directory within the image.
+**Copying the application code:** Next, copying the application code into the Docker image. This is typically done using the `COPY` instruction in the Dockerfile. Specifying the source directory of the code and the destination directory within the image.
 ```javascript
 # Copying the application code into the container
 COPY . /app
 ```
-- **Setting the working directory:** Using the `WORKDIR` instruction to set the working directory inside the image. This is the directory where subsequent commands will be executed.
+**Setting the working directory:** Using the `WORKDIR` instruction to set the working directory inside the image. This is the directory where subsequent commands will be executed.
 ```javascript
 # Setting the working directory inside the container
 WORKDIR /app
 ```
-- **Installing dependencies:** If our application has dependencies, we need to install them inside the Docker image. This can be done using the `RUN` instruction, which allows us to execute commands inside the image during the build process.
+**Installing dependencies:** If our application has dependencies, we need to install them inside the Docker image. This can be done using the `RUN` instruction, which allows us to execute commands inside the image during the build process.
 ```javascript
 # Installing dependencies
 RUN pip install -r requirements.txt
 ```
-- **Expose any necessary ports:** If our application listens on a specific port, we need to expose that port to allow external access. Using the `EXPOSE` instruction to specify the desired port number.
+**Expose any necessary ports:** If our application listens on a specific port, we need to expose that port to allow external access. Using the `EXPOSE` instruction to specify the desired port number.
 ```javascript
 # Exposing port 5000 for the Flask application
 EXPOSE 8080
 ```
-- **Define the startup command:** Finally, specifying the command that should be run when the container starts. This is done using the `CMD` instruction.
+**Define the startup command:** Finally, specifying the command that should be run when the container starts. This is done using the `CMD` instruction.
 ```javascript
 # Defining the startup command
 CMD ["python", "app.py"]
 ```
-- **Build the Docker image:** With the Dockerfile in place, we can now build the Docker image. we have to open a terminal or command prompt, navigate to the directory containing the Dockerfile, and run the following command:
+**Build the Docker image:** With the Dockerfile in place, we can now build the Docker image. we have to open a terminal or command prompt, navigate to the directory containing the Dockerfile, and run the following command:
 ```javascript
 # Building the docker image
 docker build -t myapp .
 ```
-- **Run the Docker container:** Once the image is built, we can run a container based on it. Use the following command to start a container from the image:
+**Run the Docker container:** Once the image is built, we can run a container based on it. Use the following command to start a container from the image:
 ```javascript
 docker run -p 8080:8080 myapp
 ```
