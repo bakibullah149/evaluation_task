@@ -389,3 +389,13 @@ loader.load('path/to/model.glb', function (gltf) {
 - Render the scene using the renderer as shown in the previous examples.
 
 By following these steps, we can successfully import and use a 3D model created in Blender within a Three.js application.
+
+
+-- Here are some resources I used to finish this section:
+
+[Example](https://drive.google.com/drive/folders/1syUwjYP17OtNPQn6P0Tmjc4ZkLb0L7Ja?usp=drive_link)
+
+[Threetut](https://drive.google.com/drive/folders/1TrefvIxIRAMyz4tlYIyuSI7JmM-Zy3qr?usp=drive_link)
+
+[Blender_Threejs](https://drive.google.com/drive/folders/1AU6sM5klP0E6ipbxlUUgcV_9SgOvKgTP?usp=sharing)
+
