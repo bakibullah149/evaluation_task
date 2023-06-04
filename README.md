@@ -122,3 +122,5 @@ transform_matrix = translation_matrix @ rotation_matrix @ scale_matrix
 cube.matrix_world @= transform_matrix
 ```
 Here, three transformation matrices are created using the `mathutils.Matrix` functions. The `translation_matrix` translates the cube by 2 units along the Z-axis, the `rotation_matrix` rotates the cube by `rotation_angle` around the X-axis, and the `scale_matrix` scales the cube by a factor of 1.5 along the X-axis. These matrices are then combined using the matrix multiplication operator `@` to create the `transform_matrix`. Finally, the `matrix_world` attribute of the cube object is updated by multiplying it with the `transform_matrix`, effectively applying the transformation to the cube.
+
+## Links
