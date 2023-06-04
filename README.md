@@ -344,3 +344,48 @@ animate();
 ```
 These fundamental components work together to create a basic 3D scene in Three.js. By customizing and expanding upon these components, we can create complex and interactive 3D graphics in your web applications.
 
+
+Q3.2: How can you import and use a 3D model created in Blender within a Three.js application?
+
+`Answer`: To import and use a 3D model created in Blender within a Three.js application, we can follow these steps:
+
+**Model Export from Blender:**
+
+- Open the model in Blender.
+- Ensure that the model is properly UV-mapped and textured.
+- Export the model to a compatible format like `.glb` or `.gltf`. These formats store both the geometry and materials of the model.
+
+**Importing Three.js Libraries:**
+- Include the Three.js library in the HTML file by adding a script tag:
+```javascript
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.132.2/three.min.js"></script>
+```
+- Optionally, include additional libraries like `OrbitControls` or `GLTFLoader` if needed.
+**Setting up the Scene:**
+
+- Create a scene, camera, and renderer as described in the previous examples.
+
+**Loading and Displaying the Model:**
+- Create a loader object to load the model file. In this example, we'll use `GLTFLoader` to load a `.glb` or `.gltf` file:
+```javascript
+var loader = new THREE.GLTFLoader();
+```
+- Load the model using the loader's `load` function:
+```javascript
+loader.load('path/to/model.glb', function (gltf) {
+  // Callback function called after the model is loaded
+  var model = gltf.scene;
+
+  // Manipulate or position the model if needed
+  // For example: model.position.set(x, y, z);
+
+  // Add the model to the scene
+  scene.add(model);
+});
+```
+**Lighting and Rendering:**
+
+- Add lights to the scene if necessary.
+- Render the scene using the renderer as shown in the previous examples.
+
+By following these steps, we can successfully import and use a 3D model created in Blender within a Three.js application.
