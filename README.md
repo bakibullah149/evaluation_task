@@ -263,3 +263,17 @@ This command will stop and remove the containers, but it will preserve the data 
 
 
 - **Defining the startup command:** Finally, we have to specify the command that should be executed when the container starts. This command typically runs our application.
+
+-- Here are some resources I used to finish this section:
+
+[Script Docker](https://drive.google.com/drive/folders/1gUoHQh3HsOftifhJppGoTmzYq2wpYuPx?usp=drive_link)
+
+[Hello Docker](https://drive.google.com/drive/folders/1-WLLqumygrbm2bTmWbBcP5LeUJBooS2c?usp=drive_link)
+
+[Fastapi Docker](https://drive.google.com/drive/folders/1pk3Nq_mhDBeE43FBi_EOytDxCNG89gxX?usp=drive_link)
+
+[Docker socket](https://drive.google.com/drive/folders/1v0a5hsidDEF0lMX6bQgLN9tVmxlXqsIq?usp=drive_link)
+
+[Word Press Site](https://drive.google.com/drive/folders/1vMCzWmgYTY1ObYbjHK0eJxXDee_h84QW?usp=sharing)
+
+[Example yml](https://drive.google.com/drive/folders/1WIGm1TwWo6ZkbHT6vBYKvgcyO6wO8g35?usp=sharing)
