@@ -202,6 +202,15 @@ In the Dockerfile, we would typically include the following information:
 - **Installing dependencies:** If our application has any dependencies, we need to install them inside the container. This can be done using package managers like pip or conda.
 
 
+- **Exposing ports:** If our application listens on a specific port, we should expose that port in the Dockerfile so that it can be accessed from outside the container.
+
+
+- **Setting environment variables:** If our application requires any environment variables to run correctly, we can set them in the Dockerfile.
+
+
+- **Defining the startup command:** Finally, we have to specify the command that should be executed when the container starts. This command typically runs our application.
+
+
 Q2.2: Explain how you can use Docker Compose to manage multi-container Python applications.
 
 `Answer:`Docker Compose is a tool that simplifies the management of multi-container Docker applications. It allows us to define and run multiple containers as a single service, making it easier to orchestrate complex applications. Here's an example of how to use Docker Compose to manage a multi-container Python application:
