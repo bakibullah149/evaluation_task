@@ -15,7 +15,7 @@ Leveraging the Blender Python API can extend Blender's functionality, automate r
 
 Here's a basic code example that demonstrates how we can use Python scripting to automate the creation of a simple 3D model in Blender:
 
-We can start by importing `bpy` and clearing the default scene to remove any existing objects.
+- We can start by importing `bpy` and clearing the default scene to remove any existing objects.
 ```javascript
 import bpy
 
@@ -24,7 +24,7 @@ bpy.ops.object.select_all(action='DESELECT')
 bpy.ops.object.select_by_type(type='MESH')
 bpy.ops.object.delete()
 ```
-Then, we can create a new cube mesh using the `primitive_cube_add` function. We can assign the active object to the `cube` variable for further manipulation.
+- Then, we can create a new cube mesh using the `primitive_cube_add` function. We can assign the active object to the `cube` variable for further manipulation.
 ```javascript
 # Create a new mesh object
 bpy.ops.mesh.primitive_cube_add(size=2)
@@ -32,12 +32,12 @@ bpy.ops.mesh.primitive_cube_add(size=2)
 # Get a reference to the newly created cube object
 cube = bpy.context.active_object
 ```
-Next, we can move the cube to a different location by modifying its `location` property.
+- Next, we can move the cube to a different location by modifying its `location` property.
 ```javascript
 # Move the cube to a different location
 cube.location = (0, 0, 2)
 ```
-After that, we can create a new material and set its color to red. We can append the material to the cube's materials list using `cube.data.materials.append(material)`.
+- After that, we can create a new material and set its color to red. We can append the material to the cube's materials list using `cube.data.materials.append(material)`.
 ```javascript
 # Create a new material
 material = bpy.data.materials.new(name="Red")
@@ -46,7 +46,7 @@ material.diffuse_color = (1, 1, 1, 1)  # Set the material color to red
 # Assign the material to the cube
 cube.data.materials.append(material)
 ```
-To set up rendering, we can set the render engine to Cycles and configure the render settings such as output format and file path. Finally, we use `bpy.ops.render.render` to render the scene and save the output to the specified file path.
+- To set up rendering, we can set the render engine to Cycles and configure the render settings such as output format and file path. Finally, we use `bpy.ops.render.render` to render the scene and save the output to the specified file path.
 ```javascript
 # Set the render engine to Cycles
 bpy.context.scene.render.engine = 'CYCLES'
