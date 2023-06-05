@@ -521,3 +521,51 @@ Q5.2: What kind of considerations would you need to keep in mind when deploying 
 - **Documentation and Support:** It is crucial to document the deployment process, configuration details, and any necessary troubleshooting steps. Ensuring that the team responsible for managing the production environment is well-equipped with the knowledge and resources to support the deployed Docker container is essential.
 
 By considering these factors, we can ensure a smoother and more secure deployment of the Docker container in a production environment.
+
+
+# ****Practical Task****
+
+**Updated Code:**
+```javascript
+import bpy
+
+def create_pyramid(base_size, height, position, rotation):
+    # Clear all mesh objects
+    bpy.ops.object.select_by_type(type='MESH')
+    bpy.ops.object.delete()
+
+    # Create a new mesh object
+    mesh = bpy.data.meshes.new(name="PyramidMesh")
+    obj = bpy.data.objects.new("Pyramid", mesh)
+
+    # Link the object to the scene
+    scene = bpy.context.scene
+    scene.collection.objects.link(obj)
+
+    # Create a pyramid
+    verts = [(base_size/2, base_size/2, 0), (base_size/2, -base_size/2, 0), (-base_size/2, -base_size/2, 0), (-base_size/2, base_size/2, 0), (0, 0, height)]  # 5 vertices
+    faces = [(0, 1, 4), (1, 2, 4), (2, 3, 4), (3, 0, 4)]  # 4 faces
+
+    # Update the mesh with the new data
+    mesh.from_pydata(verts, [], faces)
+
+    # Set object location and rotation
+    obj.location = position
+    obj.rotation_euler = rotation
+
+    # Update the scene
+    bpy.context.view_layer.update()
+
+# Example usage
+base_size = 2.0
+height = 1.5
+position = (3.0, 4.0, 0.0)
+rotation = (0.0, 0.0, 0.785398)  # 45 degrees in radians
+
+create_pyramid(base_size, height, position, rotation)
+
+```
+
+**Updated Blender File:** [pythone_update](https://drive.google.com/file/d/1lKpvT_ySKCNqk2zBhEAuqtK266e_MKz5/view?usp=drive_link)
+
+**Gltf File:** [Exported_File](https://drive.google.com/file/d/14R5OHx2YbsYJHmqPrSvuEHsuIIdtdCS7/view?usp=sharing)
