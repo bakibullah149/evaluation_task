@@ -1,5 +1,5 @@
 # ****evaluation_task****
-
+The answers of the assigned tasks (both technical and practical)  are given in this redme.md file with necessary code snippets and attachments.
 
 # ****Blender & Python****
 
