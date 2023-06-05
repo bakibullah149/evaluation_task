@@ -443,3 +443,14 @@ Q4.1 Revised: Imagine you're creating a pipeline to automatically generate 3D mo
 
 -- Here is the link:
 [Allinone](https://drive.google.com/drive/folders/1fKgLa4dRbrmHm_i2kfGZ15fWy48MdHP4?usp=drive_link)
+
+Q4.2: What challenges might you face when developing and deploying this kind of application, and how would you tackle them?
+
+`Answer`: When developing and deploying an application that involves generating 3D models in Blender using Python scripts, displaying them on a Flask web interface, and running the application in a Docker environment, there are several challenges I faced. Here are some challenges I had to tackle:
+
+- Exporting the generated 3D models from Blender in a format compatible with web rendering, such as .glb or .gltf, was a challenge. Ensuring that the exported models maintain the desired appearance, textures, and animations was crucial. 
+- Dockerizing the Flask application and ensuring smooth deployment and scalability were challenging. Handling dependencies, configuring networking, and managing container resources required careful consideration. I spent a lot of time troubleshooting, and I relied heavily on ChatGPT for guidance.
+- Monitoring the application's performance, tracking errors, and debugging issues were challenging.I spent a lot of time to fix the issues.
+- Automating the build, testing, and deployment processes was so complex, as I am a beginner.
+
+Throughout, I found tremendous support from online resources like ChatGPT and YouTube tutorials.
