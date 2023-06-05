@@ -454,3 +454,44 @@ Q4.2: What challenges might you face when developing and deploying this kind of 
 - Automating the build, testing, and deployment processes was so complex, as I am a beginner.
 
 Throughout, I found tremendous support from online resources like ChatGPT and YouTube tutorials.
+
+
+# ****Docker & JavaScript 3D****
+
+Q5.1: How would you containerize a Node.js application serving a web-based 3D viewer powered by Three.js?
+
+`Answer:`To containerize a Node.js application serving a web-based 3D viewer powered by Three.js, we would follow these general steps:
+
+**Creating a Dockerfile:** We would start by creating a Dockerfile in the root directory of our Node.js application. The Dockerfile specifies the steps required to build a Docker image.
+
+**Base image:** We would choose a base image that includes Node.js. We can use an official Node.js image from Docker Hub as the base. We would select a version that matches the version of Node.js our application requires.
+```javascript
+FROM node:<node_version>
+```
+**Setting the working directory:** Then we would set the working directory inside the Docker container where our application's files will be copied.
+```javascript
+WORKDIR /usr/src/app
+```
+
+**Copying dependencies:** We would copy the package.json and package-lock.json files into the container and install the dependencies.
+```javascript
+COPY package*.json ./
+RUN npm install
+```
+**Copying application files:** We would copy the remaining application files into the container.
+```javascript
+COPY . .
+```
+**Exposing a port:** Then we would specify the port on which our Node.js application listens.
+```javascript
+EXPOSE 3000
+```
+**Build the Docker image:** We would open a terminal, navigate to the directory containing the Dockerfile, and run the following command to build the Docker image.
+```javascript
+docker build -t our_image_name .
+```
+**Run the Docker container:** Once the Docker image is built, we can run a container based on that image.
+```javascript
+docker run -p 3000:3000 our_image_name
+```
+This maps port 3000 of the Docker container to port 3000 of the host machine. Adjust the port mapping as per our application's requirements.
