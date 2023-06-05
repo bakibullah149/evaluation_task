@@ -486,11 +486,11 @@ COPY . .
 ```javascript
 EXPOSE 3000
 ```
-**Build the Docker image:** We would open a terminal, navigate to the directory containing the Dockerfile, and run the following command to build the Docker image.
+**Building the Docker image:** We would open a terminal, navigate to the directory containing the Dockerfile, and run the following command to build the Docker image.
 ```javascript
 docker build -t our_image_name .
 ```
-**Run the Docker container:** Once the Docker image is built, we can run a container based on that image.
+**Running the Docker container:** Once the Docker image is built, we can run a container based on that image.
 ```javascript
 docker run -p 3000:3000 our_image_name
 ```
